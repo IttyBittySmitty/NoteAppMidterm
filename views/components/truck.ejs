@@ -1,0 +1,23 @@
+<div class="card m-4" style="width: 18rem">
+  <img
+    src="/images/<%= truck.photo || 'truck_default.svg' %>"
+    class="card-img-top"
+    alt="<%= truck.name %>"
+  />
+  <div class="card-body">
+    <div class="card-header d-flex justify-content-between">
+      <div class="d-flex justify-content-start">
+        <span><%- u.icon("star") %></span>
+        <span><%- u.icon("star") %></span>
+        <span><%- u.icon("star") %></span>
+        <span><%- u.icon("star") %></span>
+        <span><%- u.icon("star") %></span>
+      </div>
+      <div><%- u.icon("thumbs-up") %></div>
+    </div>
+    <h5 class="card-title"><%= truck.name %></h5>
+    <p class="card-text"><%= truck.description %></p>
+    <a href="<%= truck.slug %>" class="btn btn-info">Details</a>
+    <a href="/trucks/<%= truck._id %>/edit" class="btn btn-secondary">Edit</a>
+  </div>
+</div>
